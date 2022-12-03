@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
         echo "Hello from the Centos VM"
 	mkdir /etc/folder1
         mkdir /etc/folder2
-        cat /vagrant/mv.service > /etc/systemd/system/mv.service
+        cp /vagrant/mv.service /etc/systemd/system/mv.service
         systemctl daemon-reload
         systemctl start mv.service
         systemctl enable mv.service
