@@ -1,0 +1,10 @@
+[Unit] 
+Description=test service 
+[Service] 
+User=root
+WorkingDirectory=/etc/
+ExecStart=/bin/bash -c 'while true; do mv -fv folder1/* folder2; done'
+RestartSec=5s
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target 
